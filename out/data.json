@@ -9,13 +9,6 @@
             },
             "fors": {},
             "namespaces": {}
-        },
-        "prototipo.js": {
-            "name": "prototipo.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
         }
     },
     "modules": {},
@@ -193,7 +186,7 @@
         {
             "file": "menu.js",
             "line": 134,
-            "description": "Description Evento mouseenter aplicado na lista de departamentos",
+            "description": "Evento mouseenter aplicado na lista de departamentos",
             "itemtype": "method",
             "name": "Department Mouseenter",
             "params": [
@@ -227,7 +220,7 @@
         {
             "file": "menu.js",
             "line": 195,
-            "description": "Description Evento mouseenter aplicado na lista de categorias",
+            "description": "Evento mouseenter aplicado na lista de categorias",
             "itemtype": "method",
             "name": "Category Mouseenter",
             "params": [
@@ -307,167 +300,7 @@
                 "description": ""
             },
             "class": "Menu"
-        },
-        {
-            "file": "prototipo.js",
-            "line": 1,
-            "description": "Description",
-            "params": [
-                {
-                    "name": "options",
-                    "description": ""
-                }
-            ],
-            "return": {
-                "description": "CallExpression"
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 7,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "init",
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 20,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "callback",
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 53,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "mouseenter",
-            "params": [
-                {
-                    "name": "e",
-                    "description": ""
-                }
-            ],
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 76,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "mouseleave",
-            "params": [
-                {
-                    "name": "e",
-                    "description": ""
-                }
-            ],
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 114,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "mouseenter",
-            "params": [
-                {
-                    "name": "e",
-                    "description": ""
-                }
-            ],
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 126,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "mouseleave",
-            "params": [
-                {
-                    "name": "e",
-                    "description": ""
-                }
-            ],
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 144,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "exec",
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 152,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "getItems",
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 165,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "getSuccess",
-            "params": [
-                {
-                    "name": "data",
-                    "description": ""
-                }
-            ],
-            "return": {
-                "description": ""
-            },
-            "class": ""
-        },
-        {
-            "file": "prototipo.js",
-            "line": 193,
-            "description": "Description",
-            "itemtype": "method",
-            "name": "getError",
-            "return": {
-                "description": ""
-            },
-            "class": ""
         }
     ],
-    "warnings": [
-        {
-            "message": "Missing item type\nDescription",
-            "line": " prototipo.js:1"
-        }
-    ]
+    "warnings": []
 }
