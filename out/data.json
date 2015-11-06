@@ -1,0 +1,473 @@
+{
+    "project": {},
+    "files": {
+        "menu.js": {
+            "name": "menu.js",
+            "modules": {},
+            "classes": {
+                "Menu": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "prototipo.js": {
+            "name": "prototipo.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Menu": {
+            "name": "Menu",
+            "shortname": "Menu",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "menu.js",
+            "line": 4,
+            "description": "Plugin desenvolvido para estruturação do menu principal, apresentando várias opções para sua configuração",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "Opções definidas pelo usuário",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "CallExpression"
+            }
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "menu.js",
+            "line": 11,
+            "description": "Inicialização de todas as variáveis padrões e funções do plugin",
+            "itemtype": "method",
+            "name": "init",
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 17,
+            "description": "Objeto defaults contendo todas as variáveis e funções padrões do plugin",
+            "itemtype": "property",
+            "name": "defaults",
+            "type": "{Object}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 23,
+            "description": "Define a apresentação das marcas no menu principal",
+            "itemtype": "property",
+            "name": "visibleBrands",
+            "default": "true",
+            "type": "{Boolean}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 30,
+            "description": "Define a quantidade de colunas de categorias",
+            "itemtype": "property",
+            "name": "itemsPerColumn",
+            "default": "5",
+            "type": "{Number}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 37,
+            "description": "Define se a categoria será apresentada alinhada ao seu respectivo departamento",
+            "itemtype": "property",
+            "name": "alignWithParent",
+            "default": "false",
+            "type": "{Boolean}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 44,
+            "description": "Define a apresentação de produtos no menu, sendo apresentados juntamente com as categorias de cada departamento.\nPara seu perfeito funcionamento, deve-se criar um template exclusivo para os produtos, que devem ser organizados\npor coleções e inseridas no template através de um PlaceHolder. Cada componente do PlaceHolder deve ser criado com\no mesmo nome do departamento.",
+            "itemtype": "property",
+            "name": "productInMenu",
+            "default": "false",
+            "type": "{Boolean}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 54,
+            "description": "Define o título apresentado acima do produto inserido no menu, destacando sua função.",
+            "itemtype": "property",
+            "name": "titleFeatured",
+            "default": "\"Destaque\"",
+            "type": "{String}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 61,
+            "description": "Define o caminho da página contendo as coleções com produtos para serem apresentados no menu.\nO caminho deve ser escrito precedido de uma /, como no exemplo: \"/colecao-menu\".",
+            "itemtype": "property",
+            "name": "collectionsUrl",
+            "default": "\"\"",
+            "type": "{String}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 69,
+            "description": "Função de callback vazia inserida como padrão do plugin",
+            "itemtype": "method",
+            "name": "Callback Padrão",
+            "return": {
+                "description": "Possibilita a personalização do plugin"
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 76,
+            "description": "Variável vazia utilizada para captura dos elementos que representam os departamentos, sendo estes as tags H3 do menu.",
+            "itemtype": "property",
+            "name": "$department",
+            "type": "{undefined}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 82,
+            "description": "Variável vazia utilizada para captura dos elementos que representam as categorias, sendo estes as tags UL subsequentes as H3.",
+            "itemtype": "property",
+            "name": "$category",
+            "type": "{undefined}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 88,
+            "description": "Objeto criado para mesclar as opções padrões definidas no plugin com as opções definidas pelo usuário. Toda a manipulação das\nopções do plugin é realizada com este objeto.",
+            "itemtype": "property",
+            "name": "settings",
+            "type": "{Object}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 95,
+            "description": "Variável criada para receber o elemento de Marcas, tornando-se um objeto facilmente manipulável.",
+            "itemtype": "property",
+            "name": "$el_brands",
+            "type": "{Object}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 101,
+            "description": "Variável vazia, criada com a função de auxiliar na manipulação dos eventos de mouseenter e mouseleave, tanto dos departamentos,\nquanto das categorias.",
+            "itemtype": "property",
+            "name": "$menuOutObject",
+            "type": "{undefined}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 108,
+            "description": "Variável vazia, utilizada como temporizador para o efeito de fade in e fade out do menu.",
+            "itemtype": "property",
+            "name": "menuOutTimer",
+            "type": "{undefined}",
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 134,
+            "description": "Description Evento mouseenter aplicado na lista de departamentos",
+            "itemtype": "method",
+            "name": "Department Mouseenter",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "Objeto selecionado passado como parâmetro"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 157,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "mouseleave",
+            "params": [
+                {
+                    "name": "e",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 195,
+            "description": "Description Evento mouseenter aplicado na lista de categorias",
+            "itemtype": "method",
+            "name": "Category Mouseenter",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "Objeto selecionado passado como parâmetro"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 207,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "mouseleave",
+            "params": [
+                {
+                    "name": "e",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 225,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "exec",
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 233,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getItems",
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 246,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getSuccess",
+            "params": [
+                {
+                    "name": "data",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "menu.js",
+            "line": 274,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getError",
+            "return": {
+                "description": ""
+            },
+            "class": "Menu"
+        },
+        {
+            "file": "prototipo.js",
+            "line": 1,
+            "description": "Description",
+            "params": [
+                {
+                    "name": "options",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "CallExpression"
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 7,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "init",
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 20,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "callback",
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 53,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "mouseenter",
+            "params": [
+                {
+                    "name": "e",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 76,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "mouseleave",
+            "params": [
+                {
+                    "name": "e",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 114,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "mouseenter",
+            "params": [
+                {
+                    "name": "e",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 126,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "mouseleave",
+            "params": [
+                {
+                    "name": "e",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 144,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "exec",
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 152,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getItems",
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 165,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getSuccess",
+            "params": [
+                {
+                    "name": "data",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        },
+        {
+            "file": "prototipo.js",
+            "line": 193,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getError",
+            "return": {
+                "description": ""
+            },
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nDescription",
+            "line": " prototipo.js:1"
+        }
+    ]
+}

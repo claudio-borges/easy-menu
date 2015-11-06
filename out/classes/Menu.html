@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Menu</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/Menu.html">Menu</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>Menu Class</h1>
+<div class="box meta">
+
+
+        <div class="foundat">
+            Defined in: <a href="../files/menu.js.html#l4"><code>menu.js:4</code></a>
+        </div>
+
+
+</div>
+
+
+<div class="box intro">
+    <p>Plugin desenvolvido para estruturação do menu principal, apresentando várias opções para sua configuração</p>
+
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_Callback Padrão">Callback Padrão</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_Category Mouseenter">Category Mouseenter</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_Department Mouseenter">Department Mouseenter</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_exec">exec</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getError">getError</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getItems">getItems</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_getSuccess">getSuccess</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_init">init</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_mouseleave">mouseleave</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_mouseleave">mouseleave</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_$category">$category</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_$department">$department</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_$el_brands">$el_brands</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_$menuOutObject">$menuOutObject</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_alignWithParent">alignWithParent</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_collectionsUrl">collectionsUrl</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_defaults">defaults</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_itemsPerColumn">itemsPerColumn</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_menuOutTimer">menuOutTimer</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_productInMenu">productInMenu</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_settings">settings</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_titleFeatured">titleFeatured</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_visibleBrands">visibleBrands</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_Callback Padrão" class="method item">
+    <h3 class="name"><code>Callback Padrão</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l69"><code>menu.js:69</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Função de callback vazia inserida como padrão do plugin</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                    <p>Possibilita a personalização do plugin</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_Category Mouseenter" class="method item">
+    <h3 class="name"><code>Category Mouseenter</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l195"><code>menu.js:195</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description Evento mouseenter aplicado na lista de categorias</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>Objeto selecionado passado como parâmetro</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_Department Mouseenter" class="method item">
+    <h3 class="name"><code>Department Mouseenter</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l134"><code>menu.js:134</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description Evento mouseenter aplicado na lista de departamentos</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>Objeto selecionado passado como parâmetro</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_exec" class="method item">
+    <h3 class="name"><code>exec</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l225"><code>menu.js:225</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getError" class="method item">
+    <h3 class="name"><code>getError</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l274"><code>menu.js:274</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getItems" class="method item">
+    <h3 class="name"><code>getItems</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l233"><code>menu.js:233</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getSuccess" class="method item">
+    <h3 class="name"><code>getSuccess</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l246"><code>menu.js:246</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_init" class="method item">
+    <h3 class="name"><code>init</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l11"><code>menu.js:11</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Inicialização de todas as variáveis padrões e funções do plugin</p>
+
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_mouseleave" class="method item">
+    <h3 class="name"><code>mouseleave</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l157"><code>menu.js:157</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+<div id="method_mouseleave" class="method item">
+    <h3 class="name"><code>mouseleave</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>e</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l207"><code>menu.js:207</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Description</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">e</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+            </div>
+        </div>
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_$category" class="property item">
+    <h3 class="name"><code>$category</code></h3>
+    <span class="type">Undefined</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l82"><code>menu.js:82</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Variável vazia utilizada para captura dos elementos que representam as categorias, sendo estes as tags UL subsequentes as H3.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_$department" class="property item">
+    <h3 class="name"><code>$department</code></h3>
+    <span class="type">Undefined</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l76"><code>menu.js:76</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Variável vazia utilizada para captura dos elementos que representam os departamentos, sendo estes as tags H3 do menu.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_$el_brands" class="property item">
+    <h3 class="name"><code>$el_brands</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l95"><code>menu.js:95</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Variável criada para receber o elemento de Marcas, tornando-se um objeto facilmente manipulável.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_$menuOutObject" class="property item">
+    <h3 class="name"><code>$menuOutObject</code></h3>
+    <span class="type">Undefined</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l101"><code>menu.js:101</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Variável vazia, criada com a função de auxiliar na manipulação dos eventos de mouseenter e mouseleave, tanto dos departamentos,
+quanto das categorias.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_alignWithParent" class="property item">
+    <h3 class="name"><code>alignWithParent</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l37"><code>menu.js:37</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Define se a categoria será apresentada alinhada ao seu respectivo departamento</p>
+
+    </div>
+
+        <p><strong>Default:</strong> false</p>
+
+
+</div>
+<div id="property_collectionsUrl" class="property item">
+    <h3 class="name"><code>collectionsUrl</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l61"><code>menu.js:61</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Define o caminho da página contendo as coleções com produtos para serem apresentados no menu.
+O caminho deve ser escrito precedido de uma /, como no exemplo: &quot;/colecao-menu&quot;.</p>
+
+    </div>
+
+        <p><strong>Default:</strong> &quot;&quot;</p>
+
+
+</div>
+<div id="property_defaults" class="property item">
+    <h3 class="name"><code>defaults</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l17"><code>menu.js:17</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Objeto defaults contendo todas as variáveis e funções padrões do plugin</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_itemsPerColumn" class="property item">
+    <h3 class="name"><code>itemsPerColumn</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l30"><code>menu.js:30</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Define a quantidade de colunas de categorias</p>
+
+    </div>
+
+        <p><strong>Default:</strong> 5</p>
+
+
+</div>
+<div id="property_menuOutTimer" class="property item">
+    <h3 class="name"><code>menuOutTimer</code></h3>
+    <span class="type">Undefined</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l108"><code>menu.js:108</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Variável vazia, utilizada como temporizador para o efeito de fade in e fade out do menu.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_productInMenu" class="property item">
+    <h3 class="name"><code>productInMenu</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l44"><code>menu.js:44</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Define a apresentação de produtos no menu, sendo apresentados juntamente com as categorias de cada departamento.
+Para seu perfeito funcionamento, deve-se criar um template exclusivo para os produtos, que devem ser organizados
+por coleções e inseridas no template através de um PlaceHolder. Cada componente do PlaceHolder deve ser criado com
+o mesmo nome do departamento.</p>
+
+    </div>
+
+        <p><strong>Default:</strong> false</p>
+
+
+</div>
+<div id="property_settings" class="property item">
+    <h3 class="name"><code>settings</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l88"><code>menu.js:88</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Objeto criado para mesclar as opções padrões definidas no plugin com as opções definidas pelo usuário. Toda a manipulação das
+opções do plugin é realizada com este objeto.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_titleFeatured" class="property item">
+    <h3 class="name"><code>titleFeatured</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l54"><code>menu.js:54</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Define o título apresentado acima do produto inserido no menu, destacando sua função.</p>
+
+    </div>
+
+        <p><strong>Default:</strong> &quot;Destaque&quot;</p>
+
+
+</div>
+<div id="property_visibleBrands" class="property item">
+    <h3 class="name"><code>visibleBrands</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/menu.js.html#l23"><code>menu.js:23</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Define a apresentação das marcas no menu principal</p>
+
+    </div>
+
+        <p><strong>Default:</strong> true</p>
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
