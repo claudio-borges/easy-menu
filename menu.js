@@ -7,7 +7,7 @@
      * @param {Object} options Opções definidas pelo usuário
      * @return CallExpression
      */
-    $.fn.menu = function(options) {
+    $.fn.menuClickQI = function(options) {
         /**
          * Inicialização de todas as variáveis padrões e funções do plugin
          * @method init
