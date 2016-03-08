@@ -128,7 +128,7 @@
 
             $category.each(function() {
                 $(this).addClass('sub-menu' + $category.length);
-            }).last().addClass('last');
+            });
 
             $department.on({
                 /**
@@ -146,7 +146,7 @@
                     }
 
                     if (!$menuOutObject.is(':visible')) {
-                        $($menuOutObject).parent().find('>ul:visible').hide();
+                        $($menuOutObject).parent().find('ul:visible').hide();
                     }
                     clearTimeout(menuOutTimer);
                     $(this).find('a').addClass('selected');
@@ -253,21 +253,39 @@
                         var $data = $(data),
                             $collections = $data.filter('div:not(.ajax-content-loader)'),
                             $shelf,
+                            $shelf2,
                             $title,
+                            $title2,
                             $listProducts,
-                            $wrap;
+                            $listImg,
+                            $wrap,
+                            $wrap2;
 
-                        $collections.each(function() {
-                            $shelf = $(this);
-                            $title = $shelf.find('h2');
-                            $listProducts = $title.next('ul');
-                            $wrap = $('<div class="shelf-menu"><h6>' + settings.titleFeatured + '</h6></div>').append($listProducts);
+                        $collections.each(function(i) {
+                            if ($(this).context.className == "box-banner") {
+                                $shelf2 = $(this);
+                                $title2 = $shelf2.find('img').attr('alt');
+                                $listImg = $shelf2.find('a');
+                                $wrap2 = $('<div class="shelf-menu"></div>').append($listImg);
 
-                            $category.each(function() {
-                                if ($(this).prev('h3').find('a').text() == $title.html()) {
-                                    $(this).append($wrap);
-                                }
-                            });
+                                $category.each(function() {
+                                    if ($(this).prev('h3').find('.menu-item-texto').text() == $title2) {
+                                        $(this).append($wrap2);
+                                    }
+                                });
+                            }else{
+                                $shelf = $(this);
+                                $title = $shelf.find('h2');
+                                $listProducts = $title.next('ul');
+                                $wrap = $('<div class="shelf-menu"><h6>' + settings.titleFeatured + '</h6></div>').append($listProducts);
+
+                                $category.each(function() {
+                                    if ($(this).prev('h3').find('.menu-item-texto').text() == $title.html()) {
+                                        $(this).append($wrap);
+                                    }
+                                });
+                            }
+
                         });
 
                     },
