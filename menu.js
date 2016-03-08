@@ -1,22 +1,115 @@
 ;
 (function($, window, document, undefined) {
     "use strict";
-    $.fn.menu = function(options) {
+    /**
+     * Plugin desenvolvido para estruturação do menu principal, apresentando várias opções para sua configuração
+     * @class Menu
+     * @param {Object} options Opções definidas pelo usuário
+     * @return CallExpression
+     */
+    $.fn.menuClickQI = function(options) {
+        /**
+         * Inicialização de todas as variáveis padrões e funções do plugin
+         * @method init
+         * @return 
+         */
         var init = function() {
+            /**
+             * Objeto defaults contendo todas as variáveis e funções padrões do plugin
+             * @property defaults
+             * @type {Object}
+             */
             var defaults = {
+                    /**
+                     * Define a apresentação das marcas no menu principal
+                     * @property visibleBrands
+                     * @default true
+                     * @type {Boolean}
+                     */
                     visibleBrands: true,
+                    /**
+                     * Define a quantidade de colunas de categorias
+                     * @property itemsPerColumn
+                     * @default 5
+                     * @type {Number}
+                     */
                     itemsPerColumn: 5,
+                    /**
+                     * Define se a categoria será apresentada alinhada ao seu respectivo departamento
+                     * @property alignWithParent
+                     * @default false
+                     * @type {Boolean}
+                     */
                     alignWithParent: false,
+                    /**
+                     * Define a apresentação de produtos no menu, sendo apresentados juntamente com as categorias de cada departamento.
+                     * Para seu perfeito funcionamento, deve-se criar um template exclusivo para os produtos, que devem ser organizados
+                     * por coleções e inseridas no template através de um PlaceHolder. Cada componente do PlaceHolder deve ser criado com
+                     * o mesmo nome do departamento.
+                     * @property productInMenu
+                     * @default false
+                     * @type {Boolean}
+                     */
                     productInMenu: false,
+                    /**
+                     * Define o título apresentado acima do produto inserido no menu, destacando sua função.
+                     * @property titleFeatured
+                     * @default "Destaque"
+                     * @type {String}
+                     */
                     titleFeatured: "Destaque",
+                    /**
+                     * Define o caminho da página contendo as coleções com produtos para serem apresentados no menu.
+                     * O caminho deve ser escrito precedido de uma /, como no exemplo: "/colecao-menu".
+                     * @property collectionsUrl
+                     * @default ""
+                     * @type {String}
+                     */
                     collectionsUrl: "",
+                    /**
+                     * Função de callback vazia inserida como padrão do plugin
+                     * @method Callback Padrão
+                     * @return Possibilita a personalização do plugin
+                     */
                     callback: function() {}
                 },
+                /**
+                 * Variável vazia utilizada para captura dos elementos que representam os departamentos, sendo estes as tags H3 do menu.
+                 * @property $department
+                 * @type {undefined}
+                 */
                 $department,
+                /**
+                 * Variável vazia utilizada para captura dos elementos que representam as categorias, sendo estes as tags UL subsequentes as H3.
+                 * @property $category
+                 * @type {undefined}
+                 */
                 $category,
+                /**
+                 * Objeto criado para mesclar as opções padrões definidas no plugin com as opções definidas pelo usuário. Toda a manipulação das
+                 * opções do plugin é realizada com este objeto.
+                 * @property settings
+                 * @type {Object}
+                 */
                 settings = $.extend({}, defaults, options),
+                /**
+                 * Variável criada para receber o elemento de Marcas, tornando-se um objeto facilmente manipulável.
+                 * @property $el_brands
+                 * @type {Object}
+                 */
                 $el_brands = $(this).find('.brandFilter'),
+                /**
+                 * Variável vazia, criada com a função de auxiliar na manipulação dos eventos de mouseenter e mouseleave, tanto dos departamentos,
+                 * quanto das categorias.
+                 * @property $menuOutObject
+                 * @type {undefined}
+                 */
                 $menuOutObject,
+                /**
+                 * Variável vazia, utilizada como temporizador para o efeito de fade in e fade out do menu.
+                 * @property menuOutTimer
+                 * @type {undefined}
+                 */
                 menuOutTimer;
 
             if (!settings.visibleBrands) {
@@ -35,9 +128,15 @@
 
             $category.each(function() {
                 $(this).addClass('sub-menu' + $category.length);
-            }).last().addClass('last');
+            });
 
             $department.on({
+                /**
+                 * Evento mouseenter aplicado na lista de departamentos
+                 * @method Department Mouseenter
+                 * @param {} e Objeto selecionado passado como parâmetro
+                 * @return 
+                 */
                 mouseenter: function(e) {
                     e.preventDefault();
                     $menuOutObject = $(this).next();
@@ -47,7 +146,7 @@
                     }
 
                     if (!$menuOutObject.is(':visible')) {
-                        $($menuOutObject).parent().find('>ul:visible').hide();
+                        $($menuOutObject).parent().find('ul:visible').hide();
                     }
                     clearTimeout(menuOutTimer);
                     $(this).find('a').addClass('selected');
@@ -55,6 +154,12 @@
                     $(this).addClass('selected');
                     $menuOutObject.fadeIn();
                 },
+                /**
+                 * Description
+                 * @method mouseleave
+                 * @param {} e
+                 * @return 
+                 */
                 mouseleave: function(e) {
                     e.preventDefault();
                     menuOutTimer = setTimeout(function() {
@@ -87,12 +192,24 @@
                     }
                 });
             }).on({
+                /**
+                 * Evento mouseenter aplicado na lista de categorias
+                 * @method Category Mouseenter
+                 * @param {} e Objeto selecionado passado como parâmetro
+                 * @return 
+                 */
                 mouseenter: function(e) {
                     e.preventDefault();
                     $menuOutObject = $(this);
                     $menuOutObject.prev('h3').addClass('selected');
                     clearTimeout(menuOutTimer);
                 },
+                /**
+                 * Description 
+                 * @method mouseleave
+                 * @param {} e
+                 * @return 
+                 */
                 mouseleave: function(e) {
                     e.preventDefault();
                     menuOutTimer = setTimeout(function() {
@@ -105,9 +222,19 @@
             if (settings.productInMenu) {
                 var addItem = {
                     items: {},
+                    /**
+                     * Description
+                     * @method exec
+                     * @return 
+                     */
                     exec: function() {
                         addItem.getItems();
                     },
+                    /**
+                     * Description
+                     * @method getItems
+                     * @return 
+                     */
                     getItems: function() {
                         $.ajax({
                             url: "//" + document.location.host + settings.collectionsUrl,
@@ -116,28 +243,57 @@
                             error: addItem.getError
                         });
                     },
+                    /**
+                     * Description
+                     * @method getSuccess
+                     * @param {} data
+                     * @return 
+                     */
                     getSuccess: function(data) {
                         var $data = $(data),
                             $collections = $data.filter('div:not(.ajax-content-loader)'),
                             $shelf,
+                            $shelf2,
                             $title,
+                            $title2,
                             $listProducts,
-                            $wrap;
+                            $listImg,
+                            $wrap,
+                            $wrap2;
 
-                        $collections.each(function() {
-                            $shelf = $(this);
-                            $title = $shelf.find('h2');
-                            $listProducts = $title.next('ul');
-                            $wrap = $('<div class="shelf-menu"><h6>' + settings.titleFeatured + '</h6></div>').append($listProducts);
+                        $collections.each(function(i) {
+                            if ($(this).context.className == "box-banner") {
+                                $shelf2 = $(this);
+                                $title2 = $shelf2.find('img').attr('alt');
+                                $listImg = $shelf2.find('a');
+                                $wrap2 = $('<div class="shelf-menu"></div>').append($listImg);
 
-                            $category.each(function() {
-                                if ($(this).prev('h3').find('a').text() == $title.html()) {
-                                    $(this).append($wrap);
-                                }
-                            });
+                                $category.each(function() {
+                                    if ($(this).prev('h3').find('.menu-item-texto').text() == $title2) {
+                                        $(this).append($wrap2);
+                                    }
+                                });
+                            }else{
+                                $shelf = $(this);
+                                $title = $shelf.find('h2');
+                                $listProducts = $title.next('ul');
+                                $wrap = $('<div class="shelf-menu"><h6>' + settings.titleFeatured + '</h6></div>').append($listProducts);
+
+                                $category.each(function() {
+                                    if ($(this).prev('h3').find('.menu-item-texto').text() == $title.html()) {
+                                        $(this).append($wrap);
+                                    }
+                                });
+                            }
+
                         });
 
                     },
+                    /**
+                     * Description
+                     * @method getError
+                     * @return 
+                     */
                     getError: function() {
                         console.log('erro');
                     }
